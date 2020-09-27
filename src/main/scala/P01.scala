@@ -11,7 +11,8 @@ object P01 {
       case h :: Nil => h
 
       // これは _.tail してる？ そのあと tail で使えるのか...🤔
-      case _ :: tail => recursive(tail)
+      // しかし tail -> hoge にしても動くってことは .tail してないのか！
+      case _ :: hoge => recursive(hoge)
       case _ => throw new NoSuchElementException
 
     }
