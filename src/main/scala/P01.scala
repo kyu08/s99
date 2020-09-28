@@ -14,7 +14,6 @@ object P01 {
       // しかし tail -> hoge にしても動くってことは .tail してないのか！
       case _ :: hoge => recursive(hoge)
       case _ => throw new NoSuchElementException
-
     }
     recursive(list)
   }
