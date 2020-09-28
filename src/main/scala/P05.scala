@@ -9,10 +9,10 @@ object P05 {
     // recursive
     // パターンマッチのスコープに複数のListがあるときはどう指定すれば...?
     // (listの要素数をみたい...)
-    def recursive(list: List[Int], listTarget: List[Int] = Nil): List[Int] = list match {
-      case Nil => if(listTarget.length != 0) listTarget else list
-      case head :+ tail => {
-        recursive(head, listTarget :+ tail)
+    def recursive(list: List[Int]): List[Int] = list match {
+      case Nil => Nil
+      case head :: tail => {
+        recursive(tail) ::: List(head)
       }
       case _ => throw new NoSuchElementException
     }
