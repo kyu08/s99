@@ -15,6 +15,9 @@ object P06 {
       case _ => false
     }
 
+    // model answer 天才かよ
+//    def isHoge[A](ls: List[A]): Boolean = ls == ls.reverse
+
     println(recursive(list1))
     println(recursive(list2))
     recursive(list3)
