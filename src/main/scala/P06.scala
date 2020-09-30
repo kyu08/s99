@@ -8,10 +8,10 @@ object P06 {
     def recursive(list: List[Int]): Boolean = list match {
       case Nil => throw new NoSuchElementException
       case h :: Nil => true
-      case (h :: other) :+ t => {
+//      case (h :: other) :+ h => { って書きたいけどそれはむりそう
+      case (h :: other) :+ t =>
         if(h == t) return recursive(other)
         false
-      }
       case _ => false
     }
 
