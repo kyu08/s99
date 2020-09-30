@@ -7,8 +7,6 @@ object P05 {
 //    list.reverse
 
     // recursive
-    // パターンマッチのスコープに複数のListがあるときはどう指定すれば...?
-    // (listの要素数をみたい...)
     def recursive(list: List[Int]): List[Int] = list match {
       case Nil => Nil
       case head :: tail => {
