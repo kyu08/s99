@@ -3,23 +3,20 @@ package s99
 object P06 {
   def answer(): Boolean = {
     val list1 = List(1, 2, 3, 2, 1)
-    val list2 = List(1, 2, 3, 2, 2)
-    val list3 = List(1)
+    // これだと 偶数個のときが考慮できてない。
     def recursive(list: List[Int]): Boolean = list match {
       case Nil => throw new NoSuchElementException
       case h :: Nil => true
-//      case (h :: other) :+ h => { って書きたいけどそれはむりそう
+      // case (h :: other) :+ h => { って書きたいけどそれはむりそう
       case (h :: other) :+ t =>
         if(h == t) return recursive(other)
         false
       case _ => false
     }
 
-    // model answer 天才かよ
-//    def isHoge[A](ls: List[A]): Boolean = ls == ls.reverse
+    // model answer めっちゃシンプル...
+    // def isHoge[A](ls: List[A]): Boolean = ls == ls.reverse
 
-    println(recursive(list1))
-    println(recursive(list2))
-    recursive(list3)
+    recursive(list1)
   }
 }
