@@ -11,7 +11,7 @@ object P06 {
       // 先頭と末尾が等しければ再帰
       // 等しくなければ false
       // case (h :: other) :+ h => { って書きたいけどそれはむりそう
-      case (h :: other) :+ t =>
+      case (h :: other) :+ t if (h == t) =>
         if(h == t) return recursive(other)
         false
       case _ => false
