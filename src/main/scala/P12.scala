@@ -9,6 +9,10 @@ object P12 {
       case _ :: tail => recursive(tail)
     }
 
-    println(recursive(lst))
+    def decode[A](ls: List[(Int, A)]): List[A] =
+      ls flatMap { e => List.make(e._1, e._2) }
+
+//    println(recursive(lst))
+    println(decode(lst))
   }
 }
