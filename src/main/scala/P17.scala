@@ -10,5 +10,6 @@ object P17 {
     }
     println(recursive(len, list))
     assert(recursive(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) == (List('a, 'b, 'c), List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k)))
+    println(list.splitAt(3))
   }
 }
