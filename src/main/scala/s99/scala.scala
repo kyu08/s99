@@ -3,7 +3,7 @@ package s99
 object scala {
   def main(args: Array[String]): Unit ={
     println("-----------------------")
-    P21.answer()
+    P22.answer()
     println("-----------------------")
   }
 }
