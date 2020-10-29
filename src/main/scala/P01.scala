@@ -2,7 +2,7 @@ package s99
 object P01 {
   def answer: Int = {
     val list = List(1,1,2,3,5,8)
-
+    
     // model answer
     list.last
 
